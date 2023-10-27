@@ -29,7 +29,7 @@ const Resume = () => {
     return (
         <div
             id='resume'
-            className='min-h-screen relative'
+            className='min-h-screen flex items-center justify-center relative'
             style={{
             background: `url(${projectsPageImg})`,
             backgroundPosition: 'center',
@@ -45,6 +45,7 @@ const Resume = () => {
                     </Document>
                 </div>
             </div>
+            <div className="absolute bottom-0 left-0 w-full h-[1px] bg-divider" />
         </div>
         )
 }

@@ -53,6 +53,7 @@ const Projects = () => {
           </motion.div>
         </div>
       </div>
+      <div className="absolute bottom-0 left-0 w-full h-[1px] bg-divider" />
     </div>
   );
 };

@@ -5,12 +5,14 @@ interface LabelInputProps {
   labelText: string;
   placeholderText: string;
   textarea?: boolean;
+  name: string;
 }
 
 const LabelInput: FC<LabelInputProps> = ({
   labelText,
   placeholderText,
   textarea,
+  name, 
 }) => {
   return (
     <div className='flex flex-col gap-2.5 flex-1 w-full'>
@@ -24,6 +26,7 @@ const LabelInput: FC<LabelInputProps> = ({
         <textarea
           id={placeholderText}
           rows={9}
+          name={name}
           placeholder={placeholderText}
           className='bg-accent rounded-2xl py-4 px-6 text-textPrimary text-base sm:text-lg
             placeholder-textSecondary outline-none resize-none border-[1px] border-transparent focus:border-hoverSecondary'
@@ -32,6 +35,7 @@ const LabelInput: FC<LabelInputProps> = ({
           <input
             type='text'
             id={placeholderText}
+            name={name}
             placeholder={placeholderText}
             autoComplete='off'
             className='bg-accent rounded-2xl py-4 px-6 text-textPrimary text-base sm:text-lg

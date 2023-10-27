@@ -1,29 +1,26 @@
-import uiUxOne from "./assets/ui-ux-project-one.svg";
-import uiUxTwo from "./assets/ui-ux-project-two.svg";
-import uiUxThree from "./assets/ui-ux-project-three.svg";
-import webOne from "./assets/web-project-one.jpeg";
-import webTwo from "./assets/web-project-two.jpeg";
-import webThree from "./assets/web-project-three.jpeg";
+import thumbnail from './assets/thumbnail.png';
+import BuildA from './assets/BuildA.png';
+import KitchenSink from './assets/KitchenSink.jpg'
 
 export const projects = [
   {
     id: 0,
     category: "uiUx",
-    img: uiUxOne,
+    img: thumbnail,
     title: "Thumbnail AI",
   },
-  // {
-  //   id: 1,
-  //   category: "uiUx",
-  //   img: uiUxTwo,
-  //   title: "UI/UX Tablet Template",
-  // },
-  // {
-  //   id: 2,
-  //   category: "uiUx",
-  //   img: uiUxThree,
-  //   title: "Solar System App Design",
-  // },
+  {
+    id: 1,
+    category: "uiUx",
+    img: BuildA,
+    title: "Build-A-Resume",
+  },
+  {
+    id: 2,
+    category: "uiUx",
+    img: KitchenSink,
+    title: "KitchenSink",
+  },
   // {
   //   id: 3,
   //   category: "web",

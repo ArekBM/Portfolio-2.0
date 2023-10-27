@@ -1,3 +1,6 @@
+import React, { useRef } from 'react'
+import emailjs from '@emailjs/browser'
+
 // assets
 import contactPageImg from "../assets/contact-page.svg";
 import contactIllustration from "../assets/contact-illustration.svg";
@@ -12,7 +15,32 @@ import { motion } from "framer-motion";
 import { fadeIn, scale } from "../utils/variants";
 import { transition } from "../utils/transition";
 
-const Contact = () => {
+const Contact: React.FC = () => {
+
+  const form = useRef<HTMLFormElement>(null)
+
+  const sendEmail = (e: React.FormEvent) => {
+    e.preventDefault()
+
+    if(form.current){
+      emailjs.sendForm('service_bxyc5tm', 'template_6uv8k5k', form.current, 'CCjxA3suyagjrswyg')
+        .then((result) => {
+          console.log(result.text)
+        }, (error) => {
+          console.log(error.text)
+      })
+        .then(
+          () => {
+            alert('Message sent successfully!')
+            window.location.reload()
+          },
+          () => {
+            alert('Failed to send :(')
+          }
+        )
+    }
+  }
+
   return (
     <div
       id="contact"
@@ -57,20 +85,22 @@ const Contact = () => {
           viewport={{ once: false }}
           className="flex-1 flex flex-col gap-6 w-full max-w-[696px]"
         >
-          <div className="flex flex-col sm:flex-row items-center gap-6">
-            <LabelInput labelText="Your name" placeholderText="Name" />
-            <LabelInput labelText="Your email" placeholderText="Email" />
-          </div>
+          <form ref={form} onSubmit={sendEmail} >
+            <div className="flex flex-col sm:flex-row items-center gap-6">
+              <LabelInput labelText="Name" name='Name' placeholderText="Name" />
+              <LabelInput labelText="Email" name='Email' placeholderText="Email" />
+            </div>
 
-          <div className="flex flex-col sm:flex-row items-center gap-6">
-            <LabelInput
-              labelText="Your message"
-              placeholderText="Message"
-              textarea
-            />
-          </div>
-
-          <Button secondary>Send Message</Button>
+            <div className="flex flex-col sm:flex-row items-center gap-6">
+              <LabelInput
+                labelText="Message"
+                name='Message'
+                placeholderText="Message"
+                textarea
+              />
+            </div>
+            <Button secondary>Send Message</Button>
+          </form>
         </motion.div>
       </div>
 
