@@ -1,5 +1,5 @@
 // react
-import { useState } from "react";
+// import { useState } from "react";
 
 // assets
 import projectsPageImg from "../assets/projects-page.svg";

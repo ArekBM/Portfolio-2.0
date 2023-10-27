@@ -1,22 +1,23 @@
 // assets
 import aboutPageImg from "../assets/about-me-page.svg";
-import aboutIllustration from "../assets/about-illustration.svg";
-import facebookIcon from "../assets/facebook-icon.svg";
-import instagramIcon from "../assets/instagram-icon.svg";
-import twitterIcon from "../assets/twitter-icon.svg";
-import youtubeIcon from "../assets/youtube-icon.svg";
+// import twitterIcon from "../assets/twitter-icon.svg";
+// import youtubeIcon from "../assets/youtube-icon.svg";
+// import { useState } from 'react'
+// import GitHubIcon from '@mui/icons-material/GitHub';
 
 // components
 import { SocialMediaIcon, Reveal } from "../components";
+// import AnimatedLetters from "../components/animatedLetters";
 
 // framer-motion
 import { motion } from "framer-motion";
 
 // utils
-import { fadeIn, scale } from "../utils/variants";
+import { fadeIn } from "../utils/variants";
 import { transition } from "../utils/transition";
 
 const About = () => {
+
   return (
     <div 
       id='about'
@@ -57,7 +58,8 @@ const About = () => {
                   whileInView='visible'
                   viewport={{ once: false }}
                   className='flex items-center justify-center xl:justify-start gap-6'>
-                  <SocialMediaIcon imgSrc={twitterIcon} title='Twitter'></SocialMediaIcon>
+                  <SocialMediaIcon svg='Github' title='Github'></SocialMediaIcon>
+                  <SocialMediaIcon svg='LinkedIn' title='LinkedIn'></SocialMediaIcon>
                 </motion.div>
               </div>
             </div>

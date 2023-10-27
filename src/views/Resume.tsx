@@ -15,8 +15,8 @@ const Resume = () => {
     const url = 'https://raw.githubusercontent.com/ArekBM/Portfolio/master/src/assets/emiyake.pdf';
 
     const [width, setWidth] = useState(1200);
-    const [numPages, setNumPages ] = useState(null)
-    const [pageNumber, setPageNumber] = useState(1)
+    // const [numPages, setNumPages ] = useState(null)
+    // const [pageNumber, setPageNumber] = useState(1)
 
 
     useEffect(() => {
@@ -41,7 +41,7 @@ const Resume = () => {
                 <Button secondary icon={downloadIcon}>Download</Button>
                 <div className='min-h-screen flex items-center justify-center relative'>
                     <Document file={url} className='justify-center' onLoadError={console.error} >
-                        <Page pageNumber={pageNumber} scale={width > 786 ? 1.7 : 0.6} />
+                        <Page pageNumber={1} scale={width > 786 ? 1.7 : 0.6} />
                     </Document>
                 </div>
             </div>
