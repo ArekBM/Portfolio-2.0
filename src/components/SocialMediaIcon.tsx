@@ -1,5 +1,5 @@
 // mui
-import { IconButton, SvgIconTypeMap, Tooltip } from "@mui/material";
+import { IconButton, Tooltip } from "@mui/material";
 import GitHubIcon from '@mui/icons-material/GitHub';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 
@@ -8,11 +8,10 @@ import { FC } from "react";
 
 interface SocialMediaIconProps {
   svg?: string;
-  imgSrc?: string;
   title: string;
 }
 
-const SocialMediaIcon: FC<SocialMediaIconProps> = ({ imgSrc, svg, title }) => {
+const SocialMediaIcon: FC<SocialMediaIconProps> = ({ svg, title }) => {
   return (
       <Tooltip title={title} placement='bottom' arrow>
         <div
