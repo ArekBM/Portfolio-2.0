@@ -48,7 +48,7 @@ const Projects = () => {
             className='flex gap-12 mt-12 flex-wrap justify-center'
           >
             {projects.map((item) => (
-              <Card imgSrc={item.img} title={item.title} />
+              <Card imgSrc={item.img} title={item.title} demoLink={item.demoLink} />
             ))}
           </motion.div>
         </div>

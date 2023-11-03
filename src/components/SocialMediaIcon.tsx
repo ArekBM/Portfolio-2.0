@@ -19,17 +19,25 @@ const SocialMediaIcon: FC<SocialMediaIconProps> = ({ svg, title }) => {
             ease-linear duration-300'
           > 
             {svg === 'Github' ? (
-              <Tooltip title='Github'>
-                <IconButton>
-                  <GitHubIcon className='text-white group-hover:text-secondary'/>
-                </IconButton>
-              </Tooltip>
+              <div>
+                <a href='https://github.com/ArekBM' rel='noreferrer' target='_blank' className='contact' >
+                  <Tooltip title='Github'>
+                    <IconButton>
+                      <GitHubIcon className='text-white group-hover:text-secondary'/>
+                    </IconButton>
+                  </Tooltip>
+                </a>
+              </div>
             ) : (
-              <Tooltip title='LinkedIn'>
-                <IconButton>
-                  <LinkedInIcon className='text-white group-hover:text-secondary'/>
-                </IconButton>
-              </Tooltip>
+              <div>
+                <a href='https://www.linkedin.com/in/emiyake' rel='noreferrer' target='_blank' className='contact' >
+                  <Tooltip title='LinkedIn'>
+                    <IconButton>
+                      <LinkedInIcon className='text-white group-hover:text-secondary'/>
+                    </IconButton>
+                  </Tooltip>
+                </a>
+              </div>
             )}
           </div>
       </Tooltip>

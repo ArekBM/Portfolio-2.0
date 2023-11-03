@@ -1,4 +1,4 @@
-import React, { useRef } from 'react'
+import React, { useRef, useState } from 'react'
 import emailjs from '@emailjs/browser'
 
 // assets
@@ -6,7 +6,7 @@ import contactPageImg from "../assets/contact-page.svg";
 import contactIllustration from "../assets/contact-illustration.svg";
 
 // components
-import { Button, LabelInput, Reveal } from "../components";
+import { Button, LabelInput, Reveal, SentEmailModal } from "../components";
 
 // framer-motion
 import { motion } from "framer-motion";
@@ -17,10 +17,13 @@ import { transition } from "../utils/transition";
 
 const Contact: React.FC = () => {
 
+  const [ emailModalOpen, setEmailOpen ] = useState(false)
+
   const form = useRef<HTMLFormElement>(null)
 
   const sendEmail = (e: React.FormEvent) => {
     e.preventDefault()
+
 
     if(form.current){
       emailjs.sendForm('service_bxyc5tm', 'template_6uv8k5k', form.current, 'CCjxA3suyagjrswyg')
@@ -31,14 +34,14 @@ const Contact: React.FC = () => {
       })
         .then(
           () => {
-            alert('Message sent successfully!')
-            window.location.reload()
+            console.log('hi')
           },
           () => {
             alert('Failed to send :(')
           }
         )
     }
+    setEmailOpen(true)
   }
 
   return (
@@ -52,6 +55,10 @@ const Contact: React.FC = () => {
         backgroundSize: "cover",
       }}
     >
+      <SentEmailModal
+        isOpen={emailModalOpen}
+        onClose={() => setEmailOpen(false)}
+      />
       <div
         className="max-w-screen-2xl flex flex-col xl:flex-row xl:justify-between
       items-center xl:items-start gap-12 w-full pt-20 pb-20 sm:pb-16 px-12"
@@ -107,6 +114,6 @@ const Contact: React.FC = () => {
       <div className="absolute bottom-0 left-0 w-full h-[1px] bg-divider" />
     </div>
   )
-  }
+}
 
 export default Contact;

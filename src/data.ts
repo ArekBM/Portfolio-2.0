@@ -7,18 +7,21 @@ export const projects = [
     id: 0,
     category: "uiUx",
     img: thumbnail,
+    demoLink:'https://main.d2nibnnfhe4wtq.amplifyapp.com/',
     title: "Thumbnail AI",
   },
   {
     id: 1,
     category: "uiUx",
     img: BuildA,
+    demoLink: 'http://stupendous-dasik-d8337d.netlify.app/',
     title: "Build-A-Resume",
   },
   {
     id: 2,
     category: "uiUx",
     img: KitchenSink,
+    demoLink: 'https://django-server-production-550b.up.railway.app/',
     title: "KitchenSink",
   },
   // {

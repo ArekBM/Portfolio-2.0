@@ -28,6 +28,7 @@ const LabelInput: FC<LabelInputProps> = ({
           rows={9}
           name={name}
           placeholder={placeholderText}
+          required
           className='bg-accent rounded-2xl py-4 px-6 text-textPrimary text-base sm:text-lg
             placeholder-textSecondary outline-none resize-none border-[1px] border-transparent focus:border-hoverSecondary'
           ></textarea>
@@ -38,6 +39,7 @@ const LabelInput: FC<LabelInputProps> = ({
             name={name}
             placeholder={placeholderText}
             autoComplete='off'
+            required
             className='bg-accent rounded-2xl py-4 px-6 text-textPrimary text-base sm:text-lg
               placeholder-textSecondary outline-none resize-none border-[1px] border-transparent foucs:border-hoverSecondary'
             />

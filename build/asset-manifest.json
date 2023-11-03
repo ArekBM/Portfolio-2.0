@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/static/css/main.3f31fece.css",
+    "main.js": "/static/js/main.430cc0db.js",
+    "static/media/projects-page.svg": "/static/media/projects-page.a288ad051245dde972b95af641c0190d.svg",
+    "static/media/thumbnail.png": "/static/media/thumbnail.05df42bcfabee6b97f76.png",
+    "static/media/BuildA.png": "/static/media/BuildA.aab7f9221a01be9fa1d6.png",
+    "static/media/about-me-page.svg": "/static/media/about-me-page.de79a72938ed30948f5289360b9f8b19.svg",
+    "static/media/home-page.svg": "/static/media/home-page.3d99bbe3e9e69e026163d1257c19de1c.svg",
+    "static/media/KitchenSink.jpg": "/static/media/KitchenSink.bb251c7c43ed6178baba.jpg",
+    "static/media/contact-page.svg": "/static/media/contact-page.bb6dd0d5c4b36d67c1d4383d9a597201.svg",
+    "static/media/contact-illustration.svg": "/static/media/contact-illustration.309107b7faed5e5dd0680a8772fd9feb.svg",
+    "index.html": "/index.html",
+    "static/media/download-btn-icon.svg": "/static/media/download-btn-icon.db00ff1fa6f1d172b12f9e1441c6d79c.svg",
+    "main.3f31fece.css.map": "/static/css/main.3f31fece.css.map",
+    "main.430cc0db.js.map": "/static/js/main.430cc0db.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.3f31fece.css",
+    "static/js/main.430cc0db.js"
+  ]
+}
