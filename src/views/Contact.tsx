@@ -34,14 +34,13 @@ const Contact: React.FC = () => {
       })
         .then(
           () => {
-            console.log('hi')
+            setEmailOpen(true)
           },
           () => {
             alert('Failed to send :(')
           }
         )
     }
-    setEmailOpen(true)
   }
 
   return (

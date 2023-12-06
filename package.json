@@ -22,10 +22,12 @@
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-modal": "^3.16.1",
+    "react-particles": "^2.12.2",
     "react-pdf": "^7.5.1",
     "react-scripts": "5.0.1",
     "react-scroll": "^1.8.9",
     "react-simple-typewriter": "^5.0.1",
+    "tsparticles": "^2.12.0",
     "typescript": "^4.9.5",
     "web-vitals": "^2.1.4"
   },

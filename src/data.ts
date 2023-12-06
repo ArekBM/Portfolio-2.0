@@ -1,6 +1,7 @@
 import thumbnail from './assets/thumbnail.png';
 import BuildA from './assets/BuildA.png';
 import KitchenSink from './assets/KitchenSink.jpg'
+import ticketme from './assets/ticket-me.png'
 
 export const projects = [
   {
@@ -24,6 +25,13 @@ export const projects = [
     demoLink: 'https://django-server-production-550b.up.railway.app/',
     title: "KitchenSink",
   },
+  {
+    id: 3,
+    category: 'uiUx',
+    img: ticketme,
+    demoLink: 'https://ticketme-arekbm.vercel.app/',
+    title: 'ticketMe'
+  }
   // {
   //   id: 3,
   //   category: "web",
